@@ -15,7 +15,7 @@ module OmniAuth
         token_url: '/token'
       }
 
-      option :authorize_options, [:scope, :response_type]
+      option :authorize_options, [:scope, :response_type, :client_id]
 
       def request_phase
         redirect client.auth_code.authorize_url(
